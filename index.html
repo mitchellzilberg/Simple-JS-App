@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Pokedex</title>
     <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css>
+      <!-- <link rel="stylesheet" type="text/css" href="css/style.production.css"> -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -14,7 +15,9 @@
         <h1 class="main-title">Pokedex</h1>
         <img class="search-icon" src="img/icons8-search.svg" alt="search icon">
       </header>
-        <ul class="pokemon-list"></ul>
+      <!-- Pokemon List -->
+      <ul id="show-modal" class="pokemon-list"></ul>
+      <div id='modal-container'></div>
     </main>
     <script src="js/promise-polyfill.js"></script>
     <script src="js/fetch.umd.js"></script>
