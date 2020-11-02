@@ -26,6 +26,7 @@ body {
   color: black;
   border: 3px solid #3D7DCA;
   width: 400px;
+  border-radius: 7%;
 }
 
 .button-style:hover, .button-style:active {
