@@ -73,6 +73,30 @@ let pokemonRepository = (function() {
       });
     }
 
+    // Shows Modal when you click on a button
+    function showModal(pokemon) {
+      let modalBody = $('.modal-body');
+      let modalTitle = $('.modal-title');
+      let modalHeader = $('.modal-header');
+
+      modalTitle.empty();
+      modalBody.empty();
+
+      let nameElement = $('<h1>' + pokemon.name + '</h1>');
+
+      let imageElement = $('<img class="modal-img" style="width:50%">');
+      imageElement.attr('src', pokemon.imageUrl);
+
+      let heightElement = $('<p>' + 'height:' + pokemon.height + '</p>');
+
+      // let typesElement = $('<p>' + 'type:' + pokemon.types + '</p>');
+
+      modalTitle.append(nameElement);
+      modalBody.append(imageElement);
+      modalBody.append(heightElement);
+      // modalBody.append(typesElement);
+    }
+
   //returns functions
     return {
       add: add,
@@ -84,7 +108,7 @@ let pokemonRepository = (function() {
     };
 })();
 
-// -------------------END OF IIE------------------------
+// -------------------END OF IIFE------------------------
 
 //fetches from API + forEach loop
 pokemonRepository.loadList().then(function() {
@@ -92,24 +116,3 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem(pokemon);
   });
 });
-
-// Shows Modal when you click on a button
-function showModal(pokemon) {
-  let modalBody = $('.modal-body');
-  let modalTitle = $('.modal-title');
-  let modalHeader = $('.modal-header');
-
-  modalTitle.empty();
-  modalBody.empty();
-
-  let nameElement = $('<h1>' + pokemon.name + '</h1>');
-
-  let imageElement = $('<img class="modal-img" style="width:50%">');
-  imageElement.attr('src', pokemon.imageUrl);
-
-  let heightElement = $('<p>' + 'height:' + pokemon.height + '</p>');
-
-  modalTitle.append(nameElement);
-  modalBody.append(imageElement);
-  modalBody.append(heightElement);
-}
