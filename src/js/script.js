@@ -3,7 +3,7 @@ let pokemonRepository = (function() {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
-  //adds pokemon to pokemonList function if typeof is object
+  //adds pokemon to pokemonList
   function add(pokemon) {
     pokemonList.push(pokemon);
   }
@@ -82,9 +82,9 @@ let pokemonRepository = (function() {
     modalTitle.empty();
     modalBody.empty();
 
-    let nameElement = $('<h1>' + pokemon.name + '</h1>');
+    let nameElement = $('<h1> ${pokemon.name} </h1>');
 
-    let imageElement = $('<img class="modal-img" style="width:50%">');
+    let imageElement = $('<img class="modal-img">');
     imageElement.attr('src', pokemon.imageUrl);
 
     let heightElement = $('<p>' + 'height:' + pokemon.height + '</p>');
@@ -99,12 +99,12 @@ let pokemonRepository = (function() {
 
   //returns functions
   return {
-    add: add,
-    getAll: getAll,
-    addListItem: addListItem,
-    loadList: loadList,
-    loadDetails: loadDetails,
-    showDetails: showDetails
+    add,
+    getAll,
+    addListItem,
+    loadList,
+    loadDetails,
+    showDetails
   };
 })();
 
