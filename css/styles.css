@@ -1,6 +1,3 @@
-* {
-  box-sizing: border-box;
-}
 
 body {
   background-color: #FFCB05;
@@ -47,6 +44,7 @@ body {
   display: inline-block;
   text-align: right;
   width: 40px;
+  margin-bottom: 24px;
 }
 
 .pokemon-list {
@@ -107,4 +105,8 @@ body {
   margin-top: 0;
   width: 200px;
   line-height: 1;
+}
+
+.page-container {
+  margin-top: 100px;
 }
