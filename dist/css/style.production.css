@@ -1,0 +1,65 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+
+body {
+  background-color: #FFCB05;
+  text-align: center;
+  width: 100%;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.button-style {
+  border: none;
+  padding: 16px 64px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.3s; /*Safari*/
+  -o-transition-duration: 0.3s;
+     transition-duration: 0.3s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 3px solid #3D7DCA;
+  width: 400px;
+  border-radius: 7%;
+}
+
+.button-style:hover, .button-style:active {
+  border: 3px solid red;
+  background-color: #4caf50;
+}
+
+.search-icon {
+  display: inline-block;
+  width: 30px;
+  margin-bottom: 16px;
+}
+
+.modal-content {
+  margin: auto;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+}
+
+
+.page-container {
+  margin-top: 100px;
+}
