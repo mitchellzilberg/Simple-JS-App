@@ -1,6 +1,5 @@
-
 body {
-  background-color: #FFCB05;
+  background-color: #ffcb05;
   text-align: center;
   width: 100%;
   font-family: 'Press Start 2P', cursive;
@@ -23,19 +22,19 @@ body {
   cursor: pointer;
   background-color: white;
   color: black;
-  border: 3px solid #3D7DCA;
+  border: 3px solid #3d7dca;
   width: 400px;
   border-radius: 7%;
 }
 
-.button-style:hover, .button-style:active {
+.button-style:hover,
+.button-style:active {
   border: 3px solid red;
   background-color: #4caf50;
 }
 
 .search-icon {
   display: inline-block;
-  /* text-align: right; */
   width: 30px;
   margin-bottom: 16px;
 }
@@ -47,10 +46,9 @@ body {
   background: #fff;
   padding: 15px;
   width: 100%;
-  /* max-width: 700px; */
+  max-width: 700px;
   text-align: left;
 }
-
 
 .page-container {
   margin-top: 100px;
