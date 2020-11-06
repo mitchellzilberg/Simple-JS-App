@@ -1,7 +1,7 @@
 //Pokemon list and functions in IIFE
-let pokemonRepository = (function() {
-  let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+const pokemonRepository = (function() {
+  const pokemonList = [];
+  const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   //adds pokemon to pokemonList
   function add(pokemon) {
@@ -60,7 +60,11 @@ let pokemonRepository = (function() {
         // adds the details to the item
         pokemon.imageUrl = details.sprites.front_default;
         pokemon.height = details.height;
-        pokemon.types = details.types;
+
+        pokemon.types = [];
+        for (let i = 0; i < details.types.length; i++) {
+          pokemon.types.push(details.types[i].type.name);
+        }
       })
       .catch(function(e) {
         console.error(e);
@@ -82,19 +86,19 @@ let pokemonRepository = (function() {
     modalTitle.empty();
     modalBody.empty();
 
-    let nameElement = $('<h1> ${pokemon.name} </h1>');
+    let nameElement = $(`<h1> ${pokemon.name} </h1>`);
 
     let imageElement = $('<img class="modal-img">');
     imageElement.attr('src', pokemon.imageUrl);
 
     let heightElement = $('<p>' + 'height:' + pokemon.height + '</p>');
 
-    // let typesElement = $('<p>' + 'type:' + pokemon.types + '</p>');
+    let typesElement = $('<p>' + 'type:' + pokemon.types + '</p>');
 
     modalTitle.append(nameElement);
     modalBody.append(imageElement);
     modalBody.append(heightElement);
-    // modalBody.append(typesElement);
+    modalBody.append(typesElement);
   }
 
   //returns functions
