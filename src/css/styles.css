@@ -9,6 +9,11 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+#search-bar {
+  margin-left: 20px;
+  text-align: center;
+}
+
 .button-style {
   border: none;
   padding: 16px 64px;

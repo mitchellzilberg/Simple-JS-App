@@ -17,7 +17,7 @@ const pokemonRepository = (function() {
   function addListItem(pokemon) {
     let pokemonList = $('.pokemon-list');
     let listPokemon = $('<li></li>');
-    let button = $('<button>' + pokemon.name + '</button>');
+    let button = $('<button class="list-group-item" >' + pokemon.name + '</button>');
     button.addClass('button-style');
     button.attr('data-toggle', 'modal');
     button.attr('data-target', '#modal-container');
@@ -113,6 +113,17 @@ const pokemonRepository = (function() {
 })();
 
 // -------------------END OF IIFE------------------------
+
+// Search for a Pokemon
+$(document).ready(function(){
+  $('#search-bar').on('keyup', function() {
+    let value = $(this).val().toLowerCase();
+    $('.list-group-item').filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
+
 
 //fetches from API + forEach loop
 pokemonRepository.loadList().then(function() {
