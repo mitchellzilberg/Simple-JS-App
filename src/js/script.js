@@ -115,14 +115,14 @@ const pokemonRepository = (function() {
 // -------------------END OF IIFE------------------------
 
 // Search for a Pokemon
-// $(document).ready(function(){
+$(document).ready(function(){
   $('#search-bar').on('input', function() {
     let value = $(this).val().toLowerCase();
     $('.list-group-item').filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
     });
   });
-// });
+});
 
 
 //fetches from API + forEach loop
